@@ -42,7 +42,7 @@ declare namespace F7Input {
     errorMessage? : string
     errorMessageForce? : boolean
     info? : string
-    wrap? : boolean  | true
+    wrap? : boolean
     color? : string
     colorTheme? : string
     textColor? : string

@@ -1,4 +1,5 @@
-import Vue from 'vue';
+// IMPORT_LIBRARY
+// IMPORT_COMPONENTS
 /* eslint no-underscore-dangle: "off" */
 import componentsRouter from './components-router';
 import f7 from './f7';
@@ -9,9 +10,10 @@ const Plugin = {
     const Framework7 = this;
     f7.Framework7 = Framework7;
 
-    const Extend = params.Vue || Vue; // eslint-disable-line
+    const Extend = EXTEND; // eslint-disable-line
 
-    
+    // REGISTER_COMPONENTS
+
     // Define protos
     Object.defineProperty(Extend.prototype, '$f7', {
       get() {
@@ -56,7 +58,7 @@ const Plugin = {
 
         let route;
         // eslint-disable-next-line
-        if ('vue' === 'vue') {
+        if (COMPILER === 'vue') {
           let parent = self;
           while (parent && !route) {
             if (parent._f7route) route = parent._f7route;
@@ -79,7 +81,7 @@ const Plugin = {
 
         let router;
         // eslint-disable-next-line
-        if ('vue' === 'vue') {
+        if (COMPILER === 'vue') {
           let parent = self;
           while (parent && !router) {
             if (parent._f7router) router = parent._f7router;

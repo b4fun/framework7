@@ -24,7 +24,7 @@ export default {
       className
     } = props;
     let fixedTags;
-    fixedTags = 'navbar toolbar tabbar subnavbar searchbar messagebar fab list-index'.split(' ');
+    fixedTags = 'navbar toolbar tabbar subnavbar Sheet messagebar fab list-index'.split(' ');
     const slotsDefault = self.$slots.default;
 
     if (slotsDefault && slotsDefault.length) {

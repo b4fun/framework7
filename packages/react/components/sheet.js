@@ -52,7 +52,7 @@ class F7Sheet extends React.Component {
       className
     } = props;
     let fixedTags;
-    fixedTags = 'navbar toolbar tabbar subnavbar searchbar messagebar fab list-index'.split(' ').map(tagName => `f7-${tagName}`);
+    fixedTags = 'navbar toolbar tabbar subnavbar Sheet messagebar fab list-index'.split(' ').map(tagName => `f7-${tagName}`);
     const slotsDefault = self.slots.default;
 
     if (slotsDefault && slotsDefault.length) {

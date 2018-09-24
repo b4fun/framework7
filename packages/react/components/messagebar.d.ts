@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Messagebar as MessagebarNamespace } from 'framework7/components/messagebar/messagebar';
 
 declare namespace F7Messagebar {
   interface Props {
@@ -9,9 +10,9 @@ declare namespace F7Messagebar {
     sheetVisible? : boolean
     attachmentsVisible? : boolean
     top? : boolean
-    resizable? : boolean  | true
-    bottomOffset? : number  | 0
-    topOffset? : number  | 0
+    resizable? : boolean
+    bottomOffset? : number
+    topOffset? : number
     maxHeight? : number
     resizePage? : boolean
     sendLink? : string
@@ -19,8 +20,8 @@ declare namespace F7Messagebar {
     disabled? : boolean
     readonly? : boolean
     name? : string
-    placeholder? : string  | 'Message'
-    init? : boolean  | true
+    placeholder? : string
+    init? : boolean
     color? : string
     colorTheme? : string
     textColor? : string
@@ -62,5 +63,6 @@ declare class F7Messagebar extends React.Component<F7Messagebar.Props, {}> {
   onDeleteAttachment(event? : any) : unknown
   onClickAttachment(event? : any) : unknown
   onResizePage(event? : any) : unknown
+  f7Messagebar: MessagebarNamespace.Messagebar
 }
 export default F7Messagebar;

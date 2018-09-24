@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: September 20, 2018
+ * Released on: September 24, 2018
  */
 
 (function (global, factory) {
@@ -2904,7 +2904,7 @@
         fill: valueTextColor,
         dy: semiCircle ? labelText ? -labelFontSize - 15 : -5 : 0,
         textAnchor: 'middle',
-        dominantBaseline: !semiCircle && 'middle'
+        dominantBaseline: !semiCircle ? 'middle' : null
       }, valueText), labelText && React.createElement('text', {
         className: 'gauge-label-text',
         x: '50%',
@@ -2914,7 +2914,7 @@
         fill: labelTextColor,
         dy: semiCircle ? -5 : valueText ? valueFontSize / 2 + 10 : 0,
         textAnchor: 'middle',
-        dominantBaseline: !semiCircle && 'middle'
+        dominantBaseline: !semiCircle ? 'middle' : null
       }, labelText)));
     };
 
@@ -9154,7 +9154,7 @@
       var style = props.style;
       var className = props.className;
       var fixedTags;
-      fixedTags = 'navbar toolbar tabbar subnavbar searchbar messagebar fab list-index'.split(' ').map(function (tagName) { return ("f7-" + tagName); });
+      fixedTags = 'navbar toolbar tabbar subnavbar Sheet messagebar fab list-index'.split(' ').map(function (tagName) { return ("f7-" + tagName); });
       var slotsDefault = self.slots.default;
 
       if (slotsDefault && slotsDefault.length) {
@@ -10858,7 +10858,7 @@
    *
    * Released under the MIT License
    *
-   * Released on: September 20, 2018
+   * Released on: September 24, 2018
    */
 
   var Plugin = {
